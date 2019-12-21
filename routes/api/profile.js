@@ -13,7 +13,7 @@ const User = require("../../models/User");
 // @access  Publlic
 router.get("/me", auth, async (req, res) => {
   try {
-    const profile = await await Profile.findOne({
+    const profile = await Profile.findOne({
       user: req.user.id
     }).populate("user", ["name", "avatar"]);
 
@@ -356,7 +356,7 @@ router.get('/github/:username', (req, res) => {
       if(error) console.error(error);
 
       if(response.statusCode !== 200) {
-        res,status(404).json({ msg: 'No Github profile found' })
+        return res.status(404).json({ msg: 'No Github profile found' })
       }
 
       res.json(JSON.parse(body));
