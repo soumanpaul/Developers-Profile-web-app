@@ -38,6 +38,7 @@
 
 ```
 .
+.
 ├── package.json
 ├── public
 │   ├── favicon.ico
@@ -63,6 +64,7 @@
 │   │   │   ├── Alart.js
 │   │   │   ├── Landing.js
 │   │   │   ├── Navbar.js
+│   │   │   ├── NotFound.js
 │   │   │   └── Spinner.js
 │   │   ├── post
 │   │   │   ├── CommentForm.js
@@ -88,7 +90,8 @@
 │   │   │   ├── ProfileItem.js
 │   │   │   └── Profiles.js
 │   │   └── routing
-│   │       └── PrivateRoute.js
+│   │       ├── PrivateRoute.js
+│   │       └── Routes.js
 │   ├── img
 │   │   └── showcase.jpg
 │   ├── index.js
@@ -112,6 +115,5 @@
 │   └── utils
 │       └── setAuthToken.js
 └── yarn.lock
-
 
 ```
