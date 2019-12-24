@@ -1,0 +1,663 @@
+{
+	"info": {
+		"_postman_id": "fd014d6a-1174-4791-a6cc-407584bd7044",
+		"name": "DevConnector",
+		"description": "A Sofial network for Developers.",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Users & Auth",
+			"item": [
+				{
+					"name": " Regiusers user",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": "JSON Type",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"name\": \"Souman Paul\",\n\t\"email\": \"souman1729@gmail.com\",\n\t\"password\": \"123456\"\n}"
+						},
+						"url": {
+							"raw": "{{URL}}/api/users",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"api",
+								"users"
+							]
+						},
+						"description": "Register User in our database"
+					},
+					"response": []
+				},
+				{
+					"name": "Login User",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "x-auth-token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNWUwMjA0YTMwNjBmYjMzNDBhOTA0ZGIzIn0sImlhdCI6MTU3NzE5MDU2MywiZXhwIjoxNTc3MTk0MTYzfQ.5x-eWdoill0VFk_aDMG9bp-rRN7Z6rkTWwF7APSlp34",
+								"description": "john token",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"email\": \"souman1729@gmail.com\",\n\t\"password\": \"123456\"\n\t\n}\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL}}/api/auth",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"api",
+								"auth"
+							]
+						},
+						"description": "Logged in user using gmail and password"
+					},
+					"response": []
+				},
+				{
+					"name": "Get Auth Users",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "x-auth-token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNWUwMjE0N2UwNjBmYjMzNDBhOTA0ZGJlIn0sImlhdCI6MTU3NzE5NDgyMSwiZXhwIjoxNTc3MTk4NDIxfQ.fgYznRV7Ba5jxg-l-Ckx2qJiJcumuhpGO523qL9QZus",
+								"description": "Sam token",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{URL}}/api/auth",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"api",
+								"auth"
+							]
+						},
+						"description": "Get authoriged user Information"
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "Profiles",
+			"item": [
+				{
+					"name": "Create and Update Profile",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": "JSON Type",
+								"type": "text"
+							},
+							{
+								"key": "x-auth-token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNWUwMjE0N2UwNjBmYjMzNDBhOTA0ZGJlIn0sImlhdCI6MTU3NzE5NDgyMSwiZXhwIjoxNTc3MTk4NDIxfQ.fgYznRV7Ba5jxg-l-Ckx2qJiJcumuhpGO523qL9QZus",
+								"description": "Sam token",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"company\": \"Microsoft\",\n\t\"status\": \"Software Engineer\",\n\t\"website\": \"https://soumanpaul.github.io\",\n\t\"skills\": \"HTML, CSS, Python, C++, Reactjs, Nodejs, AWS, React Native\",\n\t\"location\": \"Bengalore, KA\",\n\t\"bio\": \"Software Engineer Working at Microsoft, Open source contributor, Love writting code\",\n\t\"githubusername\": \"soumanpaul\",\n\t\"twitter\": \"https://twitter.com/_souman\",\n\t\"facebook\": \"https://www.facebook.com/souman.paul.77985\",\n\t\"youtube\": \"https://www.youtube.com/channel/UC66pQlvNkwc-Rxf_jT0vq-g?view_as=subscriber\"\n}"
+						},
+						"url": {
+							"raw": "{{URL}}/api/profile/",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"api",
+								"profile",
+								""
+							]
+						},
+						"description": "This endpoints creates and update profile ."
+					},
+					"response": []
+				},
+				{
+					"name": "Get Logged in Priofile",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "x-auth-token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNWUwMjE0N2UwNjBmYjMzNDBhOTA0ZGJlIn0sImlhdCI6MTU3NzE5NDgyMSwiZXhwIjoxNTc3MTk4NDIxfQ.fgYznRV7Ba5jxg-l-Ckx2qJiJcumuhpGO523qL9QZus",
+								"description": "Sam token",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{URL}}/api/profile/me",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"api",
+								"profile",
+								"me"
+							]
+						},
+						"description": "Get current user profile."
+					},
+					"response": []
+				},
+				{
+					"name": "Get all profiles",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{URL}}/api/profile/",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"api",
+								"profile",
+								""
+							]
+						},
+						"description": "Gei all registered user."
+					},
+					"response": []
+				},
+				{
+					"name": "Get profile by user ID",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{URL}}/api/profile/user/5e02147e060fb3340a904dbe",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"api",
+								"profile",
+								"user",
+								"5e02147e060fb3340a904dbe"
+							]
+						},
+						"description": "Get a single user by ID"
+					},
+					"response": []
+				},
+				{
+					"name": "Delete profile and User",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "x-auth-token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNWUwMjA0YTMwNjBmYjMzNDBhOTA0ZGIzIn0sImlhdCI6MTU3NzE5MDY2NiwiZXhwIjoxNTc3MTk0MjY2fQ._Gi-h2OGcjnCpRUhu0GqOCwQ4YOjYz067wPn3zTgj2M",
+								"description": "Sam token",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{URL}}/api/profile/",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"api",
+								"profile",
+								""
+							]
+						},
+						"description": "This endpoint Deletes user profile and account."
+					},
+					"response": []
+				},
+				{
+					"name": "Add Experience",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": "JSON Type",
+								"type": "text"
+							},
+							{
+								"key": "x-auth-token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNWUwMjE0N2UwNjBmYjMzNDBhOTA0ZGJlIn0sImlhdCI6MTU3NzE5NDgyMSwiZXhwIjoxNTc3MTk4NDIxfQ.fgYznRV7Ba5jxg-l-Ckx2qJiJcumuhpGO523qL9QZus",
+								"description": "Sam token",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"title\": \"Nodejs Developer\",\n\t\"company\": \"GeekAnts\",\n\t\"location\": \"bengaluru , KA\",\n\t\"from\": \"8-10-2013\",\n\t\"to\": \"3-7-2016\",\n\t\"current\": false,\n\t\"description\": \"Worked as a Nodejs developer at GeekAnts\"\n}"
+						},
+						"url": {
+							"raw": "{{URL}}/api/profile/experience",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"api",
+								"profile",
+								"experience"
+							]
+						},
+						"description": "Add new Enperience"
+					},
+					"response": []
+				},
+				{
+					"name": "Add Education",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"description": "JSON Type",
+								"key": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							},
+							{
+								"key": "x-auth-token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNWUwMjE0N2UwNjBmYjMzNDBhOTA0ZGJlIn0sImlhdCI6MTU3NzE5NDgyMSwiZXhwIjoxNTc3MTk4NDIxfQ.fgYznRV7Ba5jxg-l-Ckx2qJiJcumuhpGO523qL9QZus",
+								"description": "Sam token",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"school\": \"Techno India University\",\n\t\"degree\": \"B.Tech\",\n\t\"fieldofstudy\": \"Computer Science\",\n\t\"from\": \"8-10-2014\",\n\t\"to\": \"2-12-2018\",\n\t\"description\": \"Graduated from TIU in 2018\"\n}"
+						},
+						"url": {
+							"raw": "{{URL}}/api/profile/education/",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"api",
+								"profile",
+								"education",
+								""
+							]
+						},
+						"description": "Add new Education."
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Education",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": "JSON Type",
+								"type": "text"
+							},
+							{
+								"key": "x-auth-token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNWUwMjE0N2UwNjBmYjMzNDBhOTA0ZGJlIn0sImlhdCI6MTU3NzE5NDgyMSwiZXhwIjoxNTc3MTk4NDIxfQ.fgYznRV7Ba5jxg-l-Ckx2qJiJcumuhpGO523qL9QZus",
+								"description": "Sam token",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{URL}}/api/profile/education/5e021600060fb3340a904dc1",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"api",
+								"profile",
+								"education",
+								"5e021600060fb3340a904dc1"
+							]
+						},
+						"description": "This endpoints Deletes education."
+					},
+					"response": []
+				},
+				{
+					"name": "Get Github Repos",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{URL}}/api/profile/github/soumanpaul",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"api",
+								"profile",
+								"github",
+								"soumanpaul"
+							]
+						},
+						"description": "This endpoints fetch user github informations"
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "Posts",
+			"item": [
+				{
+					"name": "Add new Post",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"description": "JSON Type",
+								"key": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							},
+							{
+								"key": "x-auth-token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNWUwMjE0N2UwNjBmYjMzNDBhOTA0ZGJlIn0sImlhdCI6MTU3NzE5NDgyMSwiZXhwIjoxNTc3MTk4NDIxfQ.fgYznRV7Ba5jxg-l-Ckx2qJiJcumuhpGO523qL9QZus",
+								"description": "Sam token",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\n\t\"text\": \"React is a JavaScript library for building user interfaces. It is maintained by Facebook and a community of individual developers and companies. React can be used as a base in the development of single-page or mobile applications, as it is optimal for fetching rapidly changing data that needs to be recorded.\"\n}"
+						},
+						"url": {
+							"raw": "{{URL}}/api/posts",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"api",
+								"posts"
+							]
+						},
+						"description": "This endpoint addes new post to database."
+					},
+					"response": []
+				},
+				{
+					"name": "Get All Posts ",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"description": "JSON Type",
+								"key": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							},
+							{
+								"key": "x-auth-token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNWUwMjE0N2UwNjBmYjMzNDBhOTA0ZGJlIn0sImlhdCI6MTU3NzE5NDgyMSwiZXhwIjoxNTc3MTk4NDIxfQ.fgYznRV7Ba5jxg-l-Ckx2qJiJcumuhpGO523qL9QZus",
+								"description": "Sam token",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\n\t\"text\": \"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.\"\n}"
+						},
+						"url": {
+							"raw": "{{URL}}/api/posts/",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"api",
+								"posts",
+								""
+							]
+						},
+						"description": "Get all posts "
+					},
+					"response": []
+				},
+				{
+					"name": "Get Single Post",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": "JSON Type",
+								"type": "text"
+							},
+							{
+								"key": "x-auth-token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNWUwMjE0N2UwNjBmYjMzNDBhOTA0ZGJlIn0sImlhdCI6MTU3NzE5NDgyMSwiZXhwIjoxNTc3MTk4NDIxfQ.fgYznRV7Ba5jxg-l-Ckx2qJiJcumuhpGO523qL9QZus",
+								"description": "Sam token",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{URL}}/api/posts/5e021652060fb3340a904dc2",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"api",
+								"posts",
+								"5e021652060fb3340a904dc2"
+							]
+						},
+						"description": "This endpoints fetch single post from database based on post ID"
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Post By Post ID",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": "JSON Type",
+								"type": "text"
+							},
+							{
+								"key": "x-auth-token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNWUwMjE0N2UwNjBmYjMzNDBhOTA0ZGJlIn0sImlhdCI6MTU3NzE5NDgyMSwiZXhwIjoxNTc3MTk4NDIxfQ.fgYznRV7Ba5jxg-l-Ckx2qJiJcumuhpGO523qL9QZus",
+								"description": "Sam token",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\n}"
+						},
+						"url": {
+							"raw": "{{URL}}/api/posts/5e021652060fb3340a904dc2",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"api",
+								"posts",
+								"5e021652060fb3340a904dc2"
+							]
+						},
+						"description": "This endpoint deletes particular post By post ID"
+					},
+					"response": []
+				},
+				{
+					"name": "Like Post",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "x-auth-token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNWUwMjE0N2UwNjBmYjMzNDBhOTA0ZGJlIn0sImlhdCI6MTU3NzE5NDgyMSwiZXhwIjoxNTc3MTk4NDIxfQ.fgYznRV7Ba5jxg-l-Ckx2qJiJcumuhpGO523qL9QZus",
+								"description": "Sam token",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{URL}}/api/posts/like/5e0216e2060fb3340a904dc3",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"api",
+								"posts",
+								"like",
+								"5e0216e2060fb3340a904dc3"
+							]
+						},
+						"description": "This endpoint lokes a post."
+					},
+					"response": []
+				},
+				{
+					"name": "Unlike Post",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": "JSON Type",
+								"type": "text"
+							},
+							{
+								"key": "x-auth-token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNWUwMjE0N2UwNjBmYjMzNDBhOTA0ZGJlIn0sImlhdCI6MTU3NzE5NDgyMSwiZXhwIjoxNTc3MTk4NDIxfQ.fgYznRV7Ba5jxg-l-Ckx2qJiJcumuhpGO523qL9QZus",
+								"description": "Sam token",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{URL}}/api/posts/unlike/5e0216e2060fb3340a904dc3",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"api",
+								"posts",
+								"unlike",
+								"5e0216e2060fb3340a904dc3"
+							]
+						},
+						"description": "This endpoints Unlike post."
+					},
+					"response": []
+				},
+				{
+					"name": "Comment On Post",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": "JSON Type",
+								"type": "text"
+							},
+							{
+								"key": "x-auth-token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNWUwMjE0N2UwNjBmYjMzNDBhOTA0ZGJlIn0sImlhdCI6MTU3NzE5NDgyMSwiZXhwIjoxNTc3MTk4NDIxfQ.fgYznRV7Ba5jxg-l-Ckx2qJiJcumuhpGO523qL9QZus",
+								"description": "Sam token",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"text\": \"Thank you great post\"\n}"
+						},
+						"url": {
+							"raw": "{{URL}}/api/posts/comment/5e0216e2060fb3340a904dc3",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"api",
+								"posts",
+								"comment",
+								"5e0216e2060fb3340a904dc3"
+							]
+						},
+						"description": "Comment on post with post ID and comment ID"
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Comment",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "x-auth-token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNWUwMjE0N2UwNjBmYjMzNDBhOTA0ZGJlIn0sImlhdCI6MTU3NzE5NDgyMSwiZXhwIjoxNTc3MTk4NDIxfQ.fgYznRV7Ba5jxg-l-Ckx2qJiJcumuhpGO523qL9QZus",
+								"description": "Sam token",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{URL}}/api/posts/comment/5e0216e2060fb3340a904dc3/5e021722060fb3340a904dc5",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"api",
+								"posts",
+								"comment",
+								"5e0216e2060fb3340a904dc3",
+								"5e021722060fb3340a904dc5"
+							]
+						},
+						"description": "Delete comment by comment ID"
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		}
+	],
+	"protocolProfileBehavior": {}
+}

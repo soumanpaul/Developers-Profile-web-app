@@ -136,7 +136,7 @@ npm start
 
 ## Demo
 
-The API is live at [comming soon..]()
+API Documentatioin [comming soon..]()
 
 Extensive API documentation with examples [here](https://documenter.getpostman.com/view/5731747/SWLYDBiQ?version=latest#bb9e7694-8e53-4f33-b833-6dbab3727a3f)
 
