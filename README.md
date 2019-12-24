@@ -1,4 +1,7 @@
-# DevConnect
+# Developers-Protfolio
+
+## Intro
+ Create Developer Protfolio a full stack web app for Developers using MERN stack.
 
 
 
