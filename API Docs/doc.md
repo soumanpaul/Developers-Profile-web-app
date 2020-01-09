@@ -1,7 +1,7 @@
 
 # DevConnector
 
-A Sofial network for Developers.
+A Protfol web application for Developers.
 
 ## Indices
 

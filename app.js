@@ -8,8 +8,8 @@ var logger = require('morgan');
 const connectDB = require('./config/db');
 
 // Define Routes
-// var indexRouter = require('./routes/index');
-// var usersRouter = require('./routes/users');
+var indexRouter = require('./routes/index');
+var usersRouter = require('./routes/users');
 const users = require('./routes/api/users');
 const auth = require('./routes/api/auth');
 const posts = require('./routes/api/posts');
@@ -29,13 +29,12 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 
-// app.use('/', indexRouter);
-// app.use('/users', usersRouter);
-
-app.use('/api/users', users);
-app.use('/api/auth', auth);
-app.use('/api/posts', posts);
-app.use('/api/profile', profile);
+app.use('/api/v1/', indexRouter);
+app.use('/api/v1/users', usersRouter);
+app.use('/api/v1/users', users);
+app.use('/api/v1/auth', auth);
+app.use('/api/v1/posts', posts);
+app.use('/api/v1/profile', profile);
 
 
 // Serve static assets in production
