@@ -3,7 +3,8 @@
 [![Current Version](https://img.shields.io/badge/version-1.0.7-green.svg)](https://github.com/soumanpaul/Developers-Profile-web-app)
 [![build status](https://img.shields.io/travis/reduxjs/react-redux/master.svg?style=flat-square)](https://travis-ci.org/reduxjs/react-redux) [![npm version](https://img.shields.io/npm/v/react-redux.svg?style=flat-square)](https://www.npmjs.com/package/react-redux)
 [![GitHub Stars](https://img.shields.io/github/stars/soumanpaul/node-chat.svg)](https://github.com/soumanpaul/Developers-Profile-web-app/stargazers)
-[![GitHub Issues](https://img.shields.io/github/issues/soumanpaul/node-chat.svg)](https://github.com/IgorAntun/node-chat/issues)  
+[![GitHub Issues](https://img.shields.io/github/issues/soumanpaul/node-chat.svg)](https://github.com/IgorAntun/node-chat/issues) [![FOSSA Status](https://app.fossa.io/api/projects/git%2Bgithub.com%2Fsoumanpaul%2FDevelopers-Profile-web-app.svg?type=shield)](https://app.fossa.io/projects/git%2Bgithub.com%2Fsoumanpaul%2FDevelopers-Profile-web-app?ref=badge_shield)
+ 
 
 
 
@@ -83,6 +84,9 @@ Extensive API documentation with examples [here](https://documenter.getpostman.c
 
 
 
+
+[![FOSSA Status](https://app.fossa.io/api/projects/git%2Bgithub.com%2Fsoumanpaul%2FDevelopers-Profile-web-app.svg?type=large)](https://app.fossa.io/projects/git%2Bgithub.com%2Fsoumanpaul%2FDevelopers-Profile-web-app?ref=badge_large)
+
 ## Usage
 
 **Clone the repo**
@@ -125,4 +129,3 @@ npm run linter
 - Version: 1.0.0
 - License: MIT
 - Author: Souman Paul
-
