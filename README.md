@@ -28,7 +28,7 @@
 [![Live Demo](https://img.shields.io/badge/demo-online-green.svg)](https://developersprofile.herokuapp.com/)
 
 
-API Documentatioin [https://github.com/soumanpaul/Developers-profile-fullstack-app/blob/master/API%20Docs/doc.md](https://github.com/soumanpaul/Developers-profile-fullstack-app/blob/master/API%20Docs/doc.md)
+API Documentatioin [here](https://github.com/soumanpaul/Developers-profile-fullstack-app/blob/master/API%20Docs/doc.md)
 
 Extensive API documentation with examples [here](https://documenter.getpostman.com/view/5731747/SWLYDBiQ?version=latest#bb9e7694-8e53-4f33-b833-6dbab3727a3f)
 
@@ -69,14 +69,14 @@ Make sure you have [Node.js](https://nodejs.org/) and [npm](https://www.npmjs.co
     ```
 	  $ npm install
     ```
-   + run this commend in  directory
+   + run this commend in ***client***  directory
    
     ```
       $ yarn install
     ```
 
 
-2. Edit configuration file in _app/config/config.json_ with your credentials(see [Setup Configurations](#configurations)).
+2. Edit configuration file in /config/default.json with your credentials(see [Setup Configurations](#configurations)).
 
 
 5. Start the application
