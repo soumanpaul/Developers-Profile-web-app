@@ -38,13 +38,13 @@ Extensive API documentation with examples [here](https://documenter.getpostman.c
 ---
 
 ## Features
-  + Create protfolio
-  + Add education detailes
-  + Add experiences
-  + Find other developers
-  + Make post
-  + Like and comment on a post.
-  + Signup/signin 
+  - [x] Create protfolio
+  - [x] Add education detailes
+  - [x] Add experiences
+  - [x] Find other developers
+  - [x] Make post
+  - [x] Like and comment on a post.
+  - [x] Signup/signin 
 ---
 ## Built With
 + Uses Express as the application Framework.
