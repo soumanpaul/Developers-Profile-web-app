@@ -52,6 +52,27 @@ Extensive API documentation with examples [here](https://documenter.getpostman.c
 + Uses [Reactjs](https://reactjs.com) to generate UI and [Redux]() for State management.
 + [UUID]() to generate unique user ID
 
+---
+## Installation
+
+
+---
+
+## How It Works
+
+---
+
+## Support
+
+---
+
+## Contribute
+
+---
+
+## License
+
+---
 <!-- + Stores session in a [MongoDB](https://github.com/mongodb/mongo) using [connect-mongo](https://github.com/kcbanner/connect-mongo); a MongoDB-based session store. -->
 <!-- + Uses [Redis](https://github.com/antirez/redis) as an Adapter for [Socket.io](https://github.com/socketio/socket.io).
 + Logging Errors and Exceptions using [Winston](https://github.com/winstonjs/winston). -->
