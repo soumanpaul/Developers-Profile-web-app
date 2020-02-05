@@ -135,7 +135,7 @@ The configurations on production will be assigned from Environment Variables on 
 You need to create a database on MongoLab, then create a database user, get the `MongoDB URI`, and assign it to `dbURI`.
 
 #### Facebook & Twitter
-You need to register a new application on both Facebook and Twitter to get your tokens by which users can grant access to your application, and login using their social accounts.
+You need to register a new application on both Facebook, Twitter to get your tokens by which users can grant access to your application, and login using their social accounts.
 
 ##### Registering the app on Facebook
 1. Go to [Facebook Developers](https://developers.facebook.com/)
